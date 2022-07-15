@@ -1,9 +1,9 @@
-package helloworld.withmessageproviders;
+package example.withmessageproviders;
 
-import api.MessageProvider;
-import api.MessageRenderer;
-import impl.HelloWorldMessageProvider;
-import impl.StandardOutMessageRenderer;
+import common.api.MessageProvider;
+import common.api.MessageRenderer;
+import common.impl.HelloWorldMessageProvider;
+import common.impl.StandardOutMessageRenderer;
 
 public class HelloWorldWithMessageProviders {
     public static void main(String... args){

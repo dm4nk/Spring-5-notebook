@@ -1,9 +1,9 @@
 package config;
 
-import api.MessageProvider;
-import api.MessageRenderer;
-import impl.HelloWorldMessageProvider;
-import impl.StandardOutMessageRenderer;
+import common.api.MessageProvider;
+import common.api.MessageRenderer;
+import common.impl.HelloWorldMessageProvider;
+import common.impl.StandardOutMessageRenderer;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 

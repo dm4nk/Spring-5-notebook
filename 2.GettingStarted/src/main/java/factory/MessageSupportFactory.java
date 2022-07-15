@@ -1,7 +1,7 @@
 package factory;
 
-import api.MessageProvider;
-import api.MessageRenderer;
+import common.api.MessageProvider;
+import common.api.MessageRenderer;
 import lombok.Getter;
 
 import java.util.Properties;
@@ -19,8 +19,12 @@ public class MessageSupportFactory {
             props.load(this.getClass().getResourceAsStream("/factory.properties"));
             String rendererClass = props.getProperty("renderer.class");
             String providerClass = props.getProperty("provider.class");
-            renderer = (MessageRenderer) Class.forName(rendererClass).getDeclaredConstructor().newInstance();
-            provider = (MessageProvider) Class.forName(providerClass).getDeclaredConstructor().newInstance();
+            renderer = (MessageRenderer) Class.forName(rendererClass)
+                    .getDeclaredConstructor()
+                    .newInstance();
+            provider = (MessageProvider) Class.forName(providerClass)
+                    .getDeclaredConstructor()
+                    .newInstance();
         } catch (Exception ex) {
             ex.printStackTrace();
         }

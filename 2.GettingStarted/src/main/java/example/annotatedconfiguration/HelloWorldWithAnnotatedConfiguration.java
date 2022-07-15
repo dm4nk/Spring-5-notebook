@@ -1,6 +1,6 @@
-package helloworld.annotatedconfiguration;
+package example.annotatedconfiguration;
 
-import api.MessageRenderer;
+import common.api.MessageRenderer;
 import config.AppConfiguration;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;

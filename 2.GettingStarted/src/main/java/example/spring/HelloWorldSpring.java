@@ -1,6 +1,6 @@
-package helloworld.spring;
+package example.spring;
 
-import api.MessageRenderer;
+import common.api.MessageRenderer;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 

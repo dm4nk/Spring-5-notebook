@@ -1,7 +1,7 @@
-package impl;
+package common.impl;
 
-import api.MessageProvider;
-import api.MessageRenderer;
+import common.api.MessageProvider;
+import common.api.MessageRenderer;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

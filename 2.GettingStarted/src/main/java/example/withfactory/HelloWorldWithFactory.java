@@ -1,7 +1,7 @@
-package helloworld.withfactory;
+package example.withfactory;
 
-import api.MessageProvider;
-import api.MessageRenderer;
+import common.api.MessageProvider;
+import common.api.MessageRenderer;
 import factory.MessageSupportFactory;
 
 public class HelloWorldWithFactory {

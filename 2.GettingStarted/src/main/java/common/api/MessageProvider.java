@@ -1,4 +1,4 @@
-package api;
+package common.api;
 
 public interface MessageProvider {
     String getMessage();
