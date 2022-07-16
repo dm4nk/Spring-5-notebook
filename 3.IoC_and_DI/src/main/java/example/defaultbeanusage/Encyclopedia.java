@@ -1,4 +1,4 @@
-package beans;
+package example.defaultbeanusage;
 
 public class Encyclopedia {
     

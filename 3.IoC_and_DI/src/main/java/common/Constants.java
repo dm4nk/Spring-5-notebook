@@ -1,9 +1,13 @@
 package common;
 
-public class Constants {
-    public static final String DEPENDENCY = "dependency";
-    public static final String XML_BEAN_FACTORY_CONFIG = "context.xml";
-    public static final String ORACLE = "oracle";
-    public static final String RENDERER = "renderer";
-    public static final String PROVIDER = "provider";
+public interface Constants {
+    String DEPENDENCY = "dependency";
+    String ORACLE = "oracle";
+    String RENDERER = "renderer";
+    String PROVIDER = "provider";
+    String CONSTRUCTOR_CONFUSION = "constructorConfusion";
+    String INJECT_SIMPLE_SPEL = "injectSimpleSpel";
+    String SONG_1 = "song1";
+    String SONG_2 = "song2";
+    String SONG_3 = "song3";
 }

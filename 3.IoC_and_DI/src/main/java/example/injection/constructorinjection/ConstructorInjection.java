@@ -1,4 +1,4 @@
-package injection.constructorinjection;
+package example.injection.constructorinjection;
 
 import common.Dependency;
 

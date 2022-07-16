@@ -1,4 +1,4 @@
-package beans;
+package example.defaultbeanusage;
 
 import lombok.Setter;
 

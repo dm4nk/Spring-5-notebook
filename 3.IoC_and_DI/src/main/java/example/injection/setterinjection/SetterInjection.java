@@ -1,4 +1,4 @@
-package injection.setterinjection;
+package example.injection.setterinjection;
 
 import common.Dependency;
 

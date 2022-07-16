@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<beans xmlns="http://www.springframework.org/schema/beans"
-       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns:context="http://www.springframework.org/schema/context"
        xmlns:c="http://www.springframework.org/schema/c"
+       xmlns="http://www.springframework.org/schema/beans"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
           http://www.springframework.org/schema/beans/spring-beans.xsd
           http://www.springframework.org/schema/context 
@@ -19,8 +19,8 @@
 </beans>
 
 
-<!--  Java provides a no-arg constructor by default
-if it does not extend except Object class and has no any constructors.
- In page 105, the class Singleton should have a private constructor
-  otherwise anybody can get an instance of it by calling new operator,
-   which breaks the rule single instance in a container. -->
+        <!--  Java provides a no-arg constructor by default
+        if it does not extend except Object class and has no any constructors.
+         In page 105, the class Singleton should have a private constructor
+          otherwise anybody can get an instance of it by calling new operator,
+           which breaks the rule single instance in a container. -->

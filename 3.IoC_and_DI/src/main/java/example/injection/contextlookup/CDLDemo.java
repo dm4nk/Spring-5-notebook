@@ -1,4 +1,4 @@
-package injection.contextlookup;
+package example.injection.contextlookup;
 
 public class CDLDemo {
     public static void main(String... args) {

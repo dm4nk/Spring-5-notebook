@@ -1,4 +1,4 @@
-package injection.contextlookup;
+package example.injection.contextlookup;
 
 import common.Constants;
 import common.Dependency;

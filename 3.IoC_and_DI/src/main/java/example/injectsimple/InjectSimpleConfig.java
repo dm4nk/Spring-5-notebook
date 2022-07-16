@@ -1,10 +1,9 @@
-package config;
+package example.injectsimple;
 
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
-@ComponentScan(basePackages = {"common/impl"})
+@ComponentScan(basePackages = {"example/injectsimple"})
 @Configuration
-public class HelloWorldConfiguration {
-
+public class InjectSimpleConfig {
 }
