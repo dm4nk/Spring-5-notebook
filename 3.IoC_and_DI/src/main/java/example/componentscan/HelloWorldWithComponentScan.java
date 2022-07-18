@@ -1,7 +1,7 @@
 package example.componentscan;
 
-import common.api.MessageRenderer;
 import common.Constants;
+import common.api.MessageRenderer;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 

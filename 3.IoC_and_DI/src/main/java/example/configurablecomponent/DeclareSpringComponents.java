@@ -8,7 +8,7 @@ import org.springframework.context.support.GenericXmlApplicationContext;
 public class DeclareSpringComponents {
     public static void main(String... args) {
         GenericXmlApplicationContext ctx = new GenericXmlApplicationContext();
-        ctx.load("classpath:" + Files.CONFIGURABLE_CTX);
+        ctx.load(Files.CONFIGURABLE_CTX);
         ctx.refresh();
 
         MessageProvider messageProvider = ctx.getBean(Constants.PROVIDER, MessageProvider.class);

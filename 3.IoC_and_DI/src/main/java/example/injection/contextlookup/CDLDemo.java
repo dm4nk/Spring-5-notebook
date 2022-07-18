@@ -2,11 +2,11 @@ package example.injection.contextlookup;
 
 public class CDLDemo {
     public static void main(String... args) {
-    	Container container = new DefaultContainer();
+        Container container = new DefaultContainer();
 
-    	ManagedComponent managedComponent = new ContextualizedDependencyLookup();
-    	managedComponent.performLookup(container);
+        ManagedComponent managedComponent = new ContextualizedDependencyLookup();
+        managedComponent.performLookup(container);
 
-    	System.out.println(managedComponent);
+        System.out.println(managedComponent);
     }
 }

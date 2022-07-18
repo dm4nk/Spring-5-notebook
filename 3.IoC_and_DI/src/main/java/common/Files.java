@@ -6,4 +6,6 @@ public interface Files {
     String CONSTRUCTOR_CONFUSION_CTX = "constructor-confusionconfusion.xml";
     String CHILD_CTX = "child-context.xml";
     String PARENT_CTX = "parent-context.xml";
+    String COLLECTIONS_CTX = "collections.xml";
+    String REPLACEMENT_CTX = "replacement.xml";
 }

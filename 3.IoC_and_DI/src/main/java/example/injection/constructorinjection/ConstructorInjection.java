@@ -4,14 +4,14 @@ import common.Dependency;
 
 public class ConstructorInjection {
 
-	private Dependency dependency;
+    private Dependency dependency;
 
-	public ConstructorInjection(Dependency dependency) {
-		this.dependency = dependency;
-	}
+    public ConstructorInjection(Dependency dependency) {
+        this.dependency = dependency;
+    }
 
-	@Override
-	public String toString() {
-		return dependency.toString();
-	}
+    @Override
+    public String toString() {
+        return dependency.toString();
+    }
 }

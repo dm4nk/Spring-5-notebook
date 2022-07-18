@@ -3,7 +3,7 @@ package example.injection.contextlookup;
 import common.Constants;
 import common.Dependency;
 
-public class ContextualizedDependencyLookup implements ManagedComponent{
+public class ContextualizedDependencyLookup implements ManagedComponent {
     private Dependency dependency;
 
     @Override
