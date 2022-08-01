@@ -5,6 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
     <modules>
         <module>Startup_and_Bean_lifecycle</module>
+        <module>3.IoC_and_DI</module>
     </modules>
 
     <parent>
