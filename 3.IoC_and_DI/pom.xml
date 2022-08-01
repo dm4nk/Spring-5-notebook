@@ -9,7 +9,6 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <name>ch3</name>
     <artifactId>3.IoC_and_DI</artifactId>
 
     <properties>

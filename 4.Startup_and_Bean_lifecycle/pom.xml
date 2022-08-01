@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>Startup_and_Bean_lifecycle</artifactId>
+    <artifactId>4.Startup_and_Bean_lifecycle</artifactId>
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>

@@ -1,10 +1,12 @@
-package example.beaninit;
+package example.beaninit.context;
 
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.context.support.GenericApplicationContext;
+
+import static common.Constants.*;
 
 
 public class SingerConfigDemo {
@@ -41,9 +43,9 @@ public class SingerConfigDemo {
 	public static void main(String... args) {
 		GenericApplicationContext ctx = new AnnotationConfigApplicationContext(SingerConfig.class);
 
-		Singer.getBean("singerOne", ctx);
-		Singer.getBean("singerTwo", ctx);
-		Singer.getBean("singerThree", ctx);
+		Singer.getBean(SINGER_ONE, ctx);
+		Singer.getBean(SINGER_TWO, ctx);
+		Singer.getBean(SINGER_THREE, ctx);
 
 		ctx.close();
 	}

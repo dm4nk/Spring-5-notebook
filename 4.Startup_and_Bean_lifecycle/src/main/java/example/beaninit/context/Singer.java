@@ -1,8 +1,7 @@
-package example.beaninit;
+package example.beaninit.context;
 
 import org.springframework.beans.factory.BeanCreationException;
 import org.springframework.context.ApplicationContext;
-import org.springframework.context.support.GenericXmlApplicationContext;
 
 import static java.lang.constant.ConstantDescs.DEFAULT_NAME;
 

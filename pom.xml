@@ -6,6 +6,7 @@
     <modules>
         <module>4.Startup_and_Bean_lifecycle</module>
         <module>3.IoC_and_DI</module>
+        <module>2.GettingStarted</module>
     </modules>
 
     <parent>
