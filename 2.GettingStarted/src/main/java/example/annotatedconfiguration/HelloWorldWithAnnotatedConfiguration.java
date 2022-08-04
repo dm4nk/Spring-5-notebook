@@ -9,7 +9,7 @@ public class HelloWorldWithAnnotatedConfiguration {
     public static void main(String... args) {
         ApplicationContext ctx = new AnnotationConfigApplicationContext
                 (AppConfiguration.class);
-        MessageRenderer mr = ctx.getBean( MessageRenderer.class);
+        MessageRenderer mr = ctx.getBean(MessageRenderer.class);
         mr.render();
     }
 }

@@ -9,7 +9,7 @@ import java.util.Properties;
 @Getter
 public class MessageSupportFactory {
     @Getter
-    private static final MessageSupportFactory instance= new MessageSupportFactory();
+    private static final MessageSupportFactory instance = new MessageSupportFactory();
     private MessageRenderer renderer;
     private MessageProvider provider;
 

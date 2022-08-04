@@ -1,4 +1,4 @@
-package example.beaninit.interfaces;
+package example.beaninit.annotation;
 
 import example.beaninit.context.Singer;
 import lombok.Getter;
@@ -7,7 +7,6 @@ import lombok.Setter;
 import lombok.ToString;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.BeanCreationException;
-import org.springframework.beans.factory.InitializingBean;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.Bean;
@@ -15,13 +14,16 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.context.support.GenericApplicationContext;
 
+import javax.annotation.PostConstruct;
+
 import static common.Constants.*;
 
 @Slf4j
 @ToString
 @Getter
 @Setter
-public class SingerWithInterface implements InitializingBean {
+public class SingerWithAnnotation {
+    private static final String DEFAULT_NAME = "Eric Clapton";
 
     private String name;
     private int age = Integer.MIN_VALUE;
@@ -36,21 +38,21 @@ public class SingerWithInterface implements InitializingBean {
         ctx.close();
     }
 
-    private static SingerWithInterface getBean(String beanName,
-                                               ApplicationContext ctx) {
+    private static SingerWithAnnotation getBean(String beanName, ApplicationContext ctx) {
         try {
-            SingerWithInterface bean = (SingerWithInterface) ctx.getBean(beanName);
+            SingerWithAnnotation bean = (SingerWithAnnotation) ctx.getBean(beanName);
             log.debug(bean.toString());
             return bean;
         } catch (BeanCreationException ex) {
-            log.debug("An error occurred in bean configuration: "
+            log.debug("An error occured in bean configuration: "
                     + ex.getMessage());
             return null;
         }
     }
 
-    public void afterPropertiesSet() {
-        log.debug("Initializing bean");
+    @PostConstruct
+    private void init() {
+        log.debug("Initializing bean via @PostConstruct");
 
         if (name == null) {
             log.debug("Using default name");
@@ -59,8 +61,8 @@ public class SingerWithInterface implements InitializingBean {
 
         if (age == Integer.MIN_VALUE) {
             throw new IllegalArgumentException(
-                    "You must set the age property of any beans of type "
-                            + SingerWithInterface.class);
+                    "You must set the age property of any beans of type " +
+                            SingerWithAnnotation.class);
         }
     }
 

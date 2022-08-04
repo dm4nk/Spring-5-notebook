@@ -13,22 +13,22 @@ import java.util.Map;
  */
 public class AliasDemo {
 
-	@Configuration
-	static class AliasBeanConfig {
-		//@Bean(name="johnMayer")
-		//@Bean(name = "jon johnny,jonathan;jim")
-		@Bean(name = {"johnMayer", "john", "jonathan", "johnny"})
-		public Singer singer() {
-			return new Singer();
-		}
-	}
+    public static void main(String... args) {
+        GenericApplicationContext ctx = new AnnotationConfigApplicationContext(AliasBeanConfig.class);
+        Map<String, Singer> beans = ctx.getBeansOfType(Singer.class);
+        beans.forEach((k, v) -> System.out.println(
+                "id: " + k + "\n aliases: " + Arrays.toString(ctx.getAliases(k)) + "\n")
+        );
+        ctx.close();
+    }
 
-	public static void main(String... args) {
-		GenericApplicationContext ctx = new AnnotationConfigApplicationContext(AliasBeanConfig.class);
-		Map<String, Singer> beans = ctx.getBeansOfType(Singer.class);
-		beans.forEach((k, v) -> System.out.println(
-				"id: " + k + "\n aliases: " + Arrays.toString(ctx.getAliases(k)) + "\n")
-		);
-		ctx.close();
-	}
+    @Configuration
+    static class AliasBeanConfig {
+        //@Bean(name="johnMayer")
+        //@Bean(name = "jon johnny,jonathan;jim")
+        @Bean(name = {"johnMayer", "john", "jonathan", "johnny"})
+        public Singer singer() {
+            return new Singer();
+        }
+    }
 }

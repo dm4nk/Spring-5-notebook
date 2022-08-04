@@ -1,5 +1,6 @@
 package example.beaninit.context;
 
+import lombok.NoArgsConstructor;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -11,43 +12,43 @@ import static common.Constants.*;
 
 public class SingerConfigDemo {
 
-	@Configuration
-	static class SingerConfig{
+    public static void main(String... args) {
+        GenericApplicationContext ctx = new AnnotationConfigApplicationContext(SingerConfig.class);
 
-		@Lazy
-		@Bean(initMethod = "init")
-		Singer singerOne() {
-			Singer singerOne = 	new Singer();
-			singerOne.setName("John Mayer");
-			singerOne.setAge(39);
-			return singerOne;
-		}
+        Singer.getBean(SINGER_ONE, ctx);
+        Singer.getBean(SINGER_TWO, ctx);
+        Singer.getBean(SINGER_THREE, ctx);
 
-		@Lazy
-		@Bean(initMethod = "init")
-		Singer singerTwo() {
-			Singer singerTwo = 	new Singer();
-			singerTwo.setAge(72);
-			return singerTwo;
-		}
+        ctx.close();
+    }
 
-		@Lazy
-		@Bean(initMethod = "init")
-		Singer singerThree() {
-			Singer singerThree = 	new Singer();
-			singerThree.setName("John Butler");
-			return singerThree;
-		}
-	}
+    @Configuration
+    @NoArgsConstructor
+    private static class SingerConfig {
 
-	public static void main(String... args) {
-		GenericApplicationContext ctx = new AnnotationConfigApplicationContext(SingerConfig.class);
+        @Lazy
+        @Bean(name = SINGER_ONE, initMethod = "init")
+        Singer singerOne() {
+            Singer singerOne = new Singer();
+            singerOne.setName("John Mayer");
+            singerOne.setAge(39);
+            return singerOne;
+        }
 
-		Singer.getBean(SINGER_ONE, ctx);
-		Singer.getBean(SINGER_TWO, ctx);
-		Singer.getBean(SINGER_THREE, ctx);
+        @Lazy
+        @Bean(name = SINGER_TWO, initMethod = "init")
+        Singer singerTwo() {
+            Singer singerTwo = new Singer();
+            singerTwo.setAge(72);
+            return singerTwo;
+        }
 
-		ctx.close();
-	}
-
+        @Lazy
+        @Bean(name = SINGER_THREE, initMethod = "init")
+        Singer singerThree() {
+            Singer singerThree = new Singer();
+            singerThree.setName("John Butler");
+            return singerThree;
+        }
+    }
 }
