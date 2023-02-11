@@ -5,9 +5,9 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
         http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="lyricHolder" class="example.injection.collection.LyricHolder"/>
+    <bean id="lyricHolder" class="com.dm4nk.example.injection.collection.LyricHolder"/>
 
-    <bean id="injectCollection" class="example.injection.collection.CollectionInjection">
+    <bean id="injectCollection" class="com.dm4nk.example.injection.collection.CollectionInjection">
         <property name="map">
             <map>
                 <entry key="someValue" value="It's a Friday, we finally made it"/>

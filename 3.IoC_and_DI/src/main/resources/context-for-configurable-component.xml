@@ -9,7 +9,7 @@
           http://www.springframework.org/schema/context 
           http://www.springframework.org/schema/context/spring-context.xsd">
 
-    <context:component-scan base-package="common.configurable"/>
+    <context:component-scan base-package="com.dm4nk.common.configurable"/>
 
     <bean id="message" class="java.lang.String"
           c:_0="I hope that someone gets my message in a bottle"/>

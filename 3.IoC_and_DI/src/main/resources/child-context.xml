@@ -7,13 +7,13 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
         http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="song1" class="example.nesting.Song"
+    <bean id="song1" class="com.dm4nk.example.nesting.Song"
           p:title-ref="parentTitle"/>
 
-    <bean id="song2" class="example.nesting.Song"
+    <bean id="song2" class="com.dm4nk.example.nesting.Song"
           p:title-ref="childTitle"/>
 
-    <bean id="song3" class="example.nesting.Song">
+    <bean id="song3" class="com.dm4nk.example.nesting.Song">
         <property name="title">
             <ref parent="childTitle"/>
         </property>

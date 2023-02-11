@@ -5,13 +5,13 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
         http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="methodReplacer" class="example.methodreplacement.FormatMessageReplacer"/>
+    <bean id="methodReplacer" class="com.dm4nk.example.methodreplacement.FormatMessageReplacer"/>
 
-    <bean id="replacementTarget" class="example.methodreplacement.ReplacementTarget">
+    <bean id="replacementTarget" class="com.dm4nk.example.methodreplacement.ReplacementTarget">
         <replaced-method name="formatMessage" replacer="methodReplacer">
             <arg-type>String</arg-type>
         </replaced-method>
     </bean>
 
-    <bean id="standardTarget" class="example.methodreplacement.ReplacementTarget"/>
+    <bean id="standardTarget" class="com.dm4nk.example.methodreplacement.ReplacementTarget"/>
 </beans>
